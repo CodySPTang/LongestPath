@@ -20,8 +20,7 @@ def findPath(arr, paths, xPos, yPos):
     if(yPos < (len(arr[xPos]) - 1)):
         if(arr[xPos][yPos + 1] > arr[xPos][yPos]):
             up = findPath(arr, paths, xPos, yPos + 1) + 1
-    #directions = [left, right, up, down]
-    paths[xPos][yPos] = max([left, right, up, down])#max(directions)
+    paths[xPos][yPos] = max([left, right, up, down])
     return paths[xPos][yPos]
 
 
